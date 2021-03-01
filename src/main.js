@@ -9,10 +9,10 @@ const copy = promisify(ncp);
 
 async function copyTemplateFiles(options) {
 
-    console.log(options.templateDirectory)
+   // console.log(options.templateDirectory)
 
     options.targetDirectory= options.targetDirectory + `/${options.nameProject}`
-    console.log(options.targetDirectory)
+   // console.log(options.targetDirectory)
     return copy(options.templateDirectory, options.targetDirectory, {
         clobber: false,
     });
@@ -41,7 +41,7 @@ export async function createProject(options) {
         process.exit(1);
     }
 
-    console.log('Copy project files');
+    console.log('Copying project files....');
     await copyTemplateFiles(options);
 
     console.log('%s Project ready', chalk.green.bold('DONE'));
