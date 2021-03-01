@@ -1,0 +1,37 @@
+{
+  "name": "create-backend-ddd",
+  "version": "1.0.0",
+  "description": "A CLI to build a template for backend with in nodejs",
+  "main": "index.js",
+  "bin": {
+    "create-backend-DDD": "bin/create-backend-DDD.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "create-backend-DDD"
+  ],
+  "author": "Diego Kraenau",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^5.0.0",
+    "chalk": "^4.1.0",
+    "esm": "^3.2.25",
+    "inquirer": "^8.0.0",
+    "ncp": "^2.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChoqueCastroLD/create-backend.git"
+  }
+}
