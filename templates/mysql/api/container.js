@@ -12,6 +12,15 @@ const TestRoutes = require("./routes/test.route");
 //Controllers
 const {TestController} = require('./controllers')
 
+//Services
+const {TestService} = require('../services');
+
+//Business
+const {TestBusiness} = require('../domain')
+
+//Repository
+const {TestRepository} = require('../dal/repository')
+
 
 const container = createContainer();
 
@@ -30,6 +39,21 @@ container
     .register({
         /*Controllers */
         testController: asClass(TestController).singleton()
+    })
+    .register({
+        /*Services */
+        testService: asClass(TestService).singleton()
+    })
+    .register({
+        /*Business */
+        testBusiness : asClass(TestBusiness).singleton()
+    })
+    .register({
+        /*Repository */
+        testRepository: asClass(TestRepository).singleton()
+    })
+    .register({
+        db: asValue(db)
     })
 
 module.exports = container;
