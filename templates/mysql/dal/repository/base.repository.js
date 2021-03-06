@@ -12,7 +12,7 @@ class BaseRepository{
     }
 
     async get(id){
-        return await this._db[this.entity].findOne({where:{id}});
+        return await this._db[this._entity].findOne({where:{id}});
     }
 
     async create(entity){
