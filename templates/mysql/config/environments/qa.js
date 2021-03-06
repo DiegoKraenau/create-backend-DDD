@@ -1,6 +1,6 @@
 module.exports = {
     PORT: process.env.QA_PORT,
-    DB:{
+    "QA":{
         username: process.env.QA_DB_USERNAME,
         password : process.env.QA_DB_PASSWORD,
         database : process.env.QA_DB_DATABASE,

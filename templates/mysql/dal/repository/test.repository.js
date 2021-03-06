@@ -4,7 +4,7 @@ class TestRepository extends BaseRepository{
 
 
     constructor({db}){
-        super(db,"Student");
+        super(db,"Test");
     }
 }
 

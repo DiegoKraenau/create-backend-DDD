@@ -4,7 +4,8 @@ const TestRouter = function({testController}){
     const router = Router();
 
     /*Here you need to write your routes about your entity  like /getAll,/find/id,etc */
-    router.get('/',testController.verifyTest.bind(testController));
+    router.get('/verifyTest',testController.verifyTest.bind(testController));
+    router.get('/',testController.getMessages.bind(testController));
 
     return router;
 }

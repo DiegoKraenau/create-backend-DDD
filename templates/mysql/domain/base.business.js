@@ -14,7 +14,7 @@ class BaseBusiness{
 
     async getAll(){
         const entities= await this._entityRepository.getAll();
-        return entities.mapp(entity=>mapper(this._entityToMap,entity.toJSON())); 
+        return entities.map(entity=>mapper(this._entityToMap,entity.toJSON())); 
     }
 
     async get(id){

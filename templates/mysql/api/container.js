@@ -22,6 +22,9 @@ const {TestBusiness} = require('../domain')
 const {TestRepository} = require('../dal/repository')
 
 
+//Db
+const db = require('../dal/models')
+
 const container = createContainer();
 
 container

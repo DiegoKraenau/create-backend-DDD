@@ -9,3 +9,5 @@ class TestService extends BaseService{
 
     /*You can add other methods that there aren´t in the crud */
 }
+
+module.exports = TestService;
