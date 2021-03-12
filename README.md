@@ -42,3 +42,15 @@ Screenshot:
 
 
 ![Alt text](https://cdn.discordapp.com/attachments/605904561995120652/816096169284993035/unknown.png)
+
+---
+To run the project :
+
+✓ Install docker and then run : docker-compose -f stack.yml up -d
+
+✓ Run the command : npm run start-project
+
+✓ Finally test the endpoints , for this example the api endpoint start with /api/.. . For example /api/test ,/api/verify,etc. You can find the endpoints in "routes/test.route.js" folder which its is inside of the folder called "api".
+
+![Alt text](https://cdn.discordapp.com/attachments/605904561995120652/820072287872745523/unknown.png)
+

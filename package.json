@@ -1,6 +1,6 @@
 {
   "name": "create-backend-ddd",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "A CLI to build a template for backend with in nodejs",
   "main": "index.js",
   "bin": {
