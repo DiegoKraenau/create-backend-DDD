@@ -25,7 +25,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    return queryInterface.bulkInsert('tests', [
+    return queryInterface.bulkInsert('Tests', [
       {
         message: "Firts message",
         createdAt: new Date(),
@@ -46,6 +46,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     await queryInterface.bulkDelete('tests', null, {});
+     await queryInterface.bulkDelete('Tests', null, {});
   }
 };

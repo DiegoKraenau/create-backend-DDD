@@ -1,9 +1,7 @@
 'use strict';
-
 /*
 sequelize-cli db:migrate //command to run the migrations that you created before npm start
 */
-
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -12,12 +10,18 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../../config/environments/index.js')[env];
 const db = {};
 
+
+
 let sequelize;
+/*Connecto to db to create the database */
+//connectToDb();
+
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
 
 fs
   .readdirSync(__dirname)

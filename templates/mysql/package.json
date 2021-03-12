@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-project": "sequelize-cli db:migrate && nodemon index"
+    "migrations": "node createdatabase & sequelize-cli db:migrate",
+    "seeders":"sequelize db:seed:all",
+    "remove-migrations":"sequelize-cli db:migrate:undo:all",
+    "remove-seeders":"sequelize db:seed:undo:all",
+    "start-project":"npm run migrations  && npm run seeders &&  nodemon index"
   },
   "keywords": [],
   "author": "Diego Kraenau",
