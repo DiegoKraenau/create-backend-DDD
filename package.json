@@ -1,6 +1,6 @@
 {
   "name": "create-backend-ddd",
-  "version": "1.1.0",
+  "version": "1.5.0",
   "description": "A CLI to build a template for backend with in nodejs",
   "main": "index.js",
   "bin": {
@@ -32,6 +32,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChoqueCastroLD/create-backend.git"
+    "url": "https://github.com/DiegoKraenau/create-backend-DDD"
   }
 }

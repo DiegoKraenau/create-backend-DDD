@@ -1,5 +1,8 @@
 'use strict';
 
+//How to add new fields with migration
+//https://dev.to/nedsoft/add-new-fields-to-existing-sequelize-migration-3527
+
 module.exports = {
     up: async (queryInterface, Sequelize) => {
         /**
