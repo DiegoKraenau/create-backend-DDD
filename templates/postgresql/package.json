@@ -1,0 +1,28 @@
+{
+  "name": "mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrations": "node createdatabase & sequelize-cli db:migrate",
+    "seeders": "sequelize db:seed:all",
+    "remove-migrations": "sequelize-cli db:migrate:undo:all",
+    "remove-seeders": "sequelize db:seed:undo:all",
+    "start-project": "npm run migrations  && npm run seeders &&  nodemon index"
+  },
+  "keywords": [],
+  "author": "Diego Kraenau",
+  "license": "ISC",
+  "dependencies": {
+    "automapper-js": "^1.0.15",
+    "awilix": "^4.3.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "pgtools": "^0.3.1",
+    "sequelize": "^6.5.0"
+  }
+}
