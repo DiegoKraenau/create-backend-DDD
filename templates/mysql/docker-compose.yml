@@ -1,0 +1,42 @@
+version: "3.3"
+
+
+services:
+  web:
+    #Container name
+    container_name: apirest
+    #If the container fell
+    restart: always
+    #Build , find the Docker file in the  directory
+    build: .
+    ports:
+      #Run in port 5000(machine) and run in port 5000(container)
+      - "5000:5000"
+    #Connect with another service
+    depends_on: 
+      - db
+    #volumes:  If you want to activate this method you will  need to do the following steps : https://stackoverflow.com/questions/60754297/docker-compose-failed-to-build-filesharing-has-been-cancelled
+     # - .:/usr/src/app/
+
+  db:
+    container_name: db
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+    volumes:
+       # To persist your data
+      - /mysql_data:/var/lib/mysql
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - "3100:3306"
+    expose:
+      # Opens port 3306 on the container
+      - "3306"
+    
+
+
+#to run stack.yml : docker-compose -f stack.yml up
+#to enter to the console of the container : docker exec -it <mycontainer> bash
+#to see volumenes : dcoker volume ls
